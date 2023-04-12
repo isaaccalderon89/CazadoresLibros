@@ -1,4 +1,4 @@
-Lobopackage com.edix.tfg.cazadoresLibros.beans;
+package com.edix.tfg.cazadoresLibros.beans;
 
 import java.io.Serializable;
 import javax.persistence.*;
