@@ -1,0 +1,5 @@
+package com.edix.tfg.cazadoresLibros.repository;
+
+public interface TarjetaRepository {
+
+}
