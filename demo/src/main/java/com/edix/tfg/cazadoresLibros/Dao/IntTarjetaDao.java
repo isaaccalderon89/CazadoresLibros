@@ -1,4 +1,4 @@
-package com.edix.tfg.cazadoresLibros.dao;
+package com.edix.tfg.cazadoresLibros.Dao;
 
 import java.util.List;
 
@@ -11,6 +11,6 @@ public interface IntTarjetaDao {
 	//Método que registra tarjetas 
 	int registrarTarjeta (Tarjeta tarjeta);
 	//Método que elimina tarjetas
-	int eliminarTarjeta (int Tarjeta);
+	int eliminarTarjeta (int idTarjeta);
 	
 }

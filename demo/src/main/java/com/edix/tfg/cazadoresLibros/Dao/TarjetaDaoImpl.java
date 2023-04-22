@@ -1,4 +1,4 @@
-package com.edix.tfg.cazadoresLibros.dao;
+package com.edix.tfg.cazadoresLibros.Dao;
 
 import java.util.List;
 
@@ -12,12 +12,13 @@ public class TarjetaDaoImpl implements IntTarjetaDao {
 	@Autowired
 	TarjetaRepository trepo;
 	
-
+	// Método para listar las tarjetas 
 	@Override
 	public List<Tarjeta> findAll() {
 		return trepo.findAll();
 	}
-
+	
+	// Método para registrar una tarjeta
 	@Override
 	public int registrarTarjeta(Tarjeta tarjeta) {
 		
@@ -32,11 +33,19 @@ public class TarjetaDaoImpl implements IntTarjetaDao {
 		return filas;
 		
 	}
-
+	
+	// Método para eliminar una tarjeta
 	@Override
-	public int eliminarTarjeta(int Tarjeta) {
-		// TODO Auto-generated method stub
-		return 0;
+	public int eliminarTarjeta(int idTarjeta) {
+		int filas = 0;
+		try {
+			trepo.deleteById(idTarjeta);
+			filas = 1;
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+		return filas;
 	}
 
 }
